@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.1</title>
+</head>
+<body>
+    <pre id="output"></pre>
+
+<script>
+let hasil = "";
+
+// Baris pertama
+hasil += "***********\n";
+
+// Baris 2 sampai 6
+for (let i = 5; i >= 1; i--) {
+
+    // Spasi di antara dua kelompok bintang
+    let spasi = 11 - (i * 2);
+
+    hasil += "*".repeat(i);
+    hasil += " ".repeat(spasi);
+    hasil += "*".repeat(i);
+    hasil += "\n";
+}
+
+document.getElementById("output").textContent = hasil;
+</script>
+    
+</body>
+</html>

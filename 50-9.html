@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.9</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        // Lima baris bintang dan 0
+        for (let i = 1; i <= 5; i++) {
+
+            hasil += '<span style="color: blue;">';
+
+            for (let j = 1; j <= 10; j++) {
+                hasil += "*";
+            }
+
+            hasil += "0";
+            hasil += "</span>";
+            hasil += "\n";
+        }
+
+        // Baris terakhir angka 0
+        hasil += '<span style="color: blue;">';
+
+        for (let i = 1; i <= 11; i++) {
+            hasil += "0";
+        }
+
+        hasil += "</span>";
+
+        document.getElementById("output").innerHTML = hasil;
+
+    </script>
+
+</body>
+</html>

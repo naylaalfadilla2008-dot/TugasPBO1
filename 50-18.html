@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.18</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        hasil += '<span style="color: blue;">';
+
+        // Perulangan baris 1 sampai 6
+        for (let i = 1; i <= 6; i++) {
+
+            // Angka 0 sebelah kiri
+            for (let j = 1; j <= i - 1; j++) {
+                hasil += "0";
+            }
+
+            // Bintang
+            hasil += "*";
+
+            // Angka 0 sebelah kanan
+            for (let j = 1; j <= 7 - i; j++) {
+                hasil += "0";
+            }
+
+            hasil += "\n";
+        }
+
+        hasil += "</span>";
+
+        document.getElementById("output").innerHTML = hasil;
+
+    </script>
+
+</body>
+</html>

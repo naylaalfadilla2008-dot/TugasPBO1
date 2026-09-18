@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.20</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        // Baris pertama angka 0
+        for (let i = 1; i <= 7; i++) {
+            hasil += "0";
+        }
+
+        hasil += "\n";
+
+        // Baris kedua bintang
+        for (let i = 1; i <= 7; i++) {
+            hasil += "*";
+        }
+
+        hasil += "\n";
+
+        // Baris ketiga tanda =
+        for (let i = 1; i <= 7; i++) {
+            hasil += "=";
+        }
+
+        hasil += "\n";
+
+        // Baris keempat angka 0
+        for (let i = 1; i <= 7; i++) {
+            hasil += "0";
+        }
+
+        hasil += "\n";
+
+        // Baris kelima bintang
+        for (let i = 1; i <= 7; i++) {
+            hasil += "*";
+        }
+
+        hasil += "\n";
+
+        // Baris keenam tanda =
+        for (let i = 1; i <= 7; i++) {
+            hasil += "=";
+        }
+
+        hasil += "\n";
+
+        document.getElementById("output").textContent = hasil;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>NO.2 Mencari Jumlah Huruf</h2>
+    <label>Masukkan kalimat:</label>
+    <input type="text" id="kalimat">
+
+    <br><br>
+
+    <label>Masukkan huruf yang dicari:</label>
+    <input type="text" id="huruf">
+
+    <br><br>
+
+    <button onclick="hitungHuruf()">Proses</button>
+
+    <script>
+        function hitungHuruf() {
+
+            let kalimat = document.getElementById("kalimat").value;
+            let huruf = document.getElementById("huruf").value;
+
+            let jumlah = 0;
+
+            for (let i = 0; i < kalimat.length; i++) {
+                if (kalimat[i].toLowerCase() == huruf.toLowerCase()) {
+                    jumlah++;
+                }
+            }
+
+            document.write("<h1>Hasil</h1>");
+            document.write("Kalimat : " + kalimat + "<br><br>");
+            document.write("Huruf yang dicari : " + huruf + "<br><br>");
+            document.write("Jumlah huruf '" + huruf + "' : " + jumlah);
+        }
+    </script>
+</body>
+</html>

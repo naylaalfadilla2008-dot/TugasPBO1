@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Membalik Kalimat</title>
+</head>
+<body>
+  <h1>NO.1 Membalik Kalimat</h1>
+
+    <label>Masukkan kalimat:</label>
+    <input type="text" id="kalimat">
+
+    <button onclick="balikKalimat()">Proses</button>
+
+    <script>
+        function balikKalimat() {
+
+            let kalimat = document.getElementById("kalimat").value;
+
+            let terbalik = kalimat.split("").reverse().join("");
+
+            document.write("<h1>Membalik Kalimat</h1>");
+            document.write("Kalimat awal : " + kalimat + "<br><br>");
+            document.write("Kalimat terbalik : " + terbalik);
+        }
+    </script>
+
+</body>
+</html>

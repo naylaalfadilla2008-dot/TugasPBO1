@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 43</title>
+</head>
+
+<body>
+
+    <h2>Mencari Bilangan Terkecil</h2>
+
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="tambah()">Tambah</button>
+
+    <p>Angka yang dimasukkan: <span id="daftar"></span></p>
+
+    <button onclick="hitung()">Cari Terkecil</button>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        let angka = [];
+
+        function tambah() {
+            let nilai = document.getElementById("angka").value;
+
+            if (nilai !== "") {
+                angka.push(Number(nilai));
+                document.getElementById("angka").value = "";
+                document.getElementById("daftar").innerHTML = angka.join(", ");
+            }
+        }
+
+        function hitung() {
+            if (angka.length < 10) {
+                document.getElementById("hasil").innerHTML =
+                    "Masukkan minimal 10 angka!";
+                return;
+            }
+
+            let terkecil = angka[0];
+
+            for (let i = 1; i < angka.length; i++) {
+                if (angka[i] < terkecil) {
+                    terkecil = angka[i];
+                }
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Bilangan terkecil = " + terkecil;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bilangan Habis Dibagi 5</title>
+  </head>
+  <body>
+    <h2>Bilangan Habis Dibagi 5</h2>
+    <script>
+      let n_awal = parseInt(prompt("Masukkan bilangan awal:"));
+      let n_akhir = parseInt(prompt("Masukkan bilangan akhir:"));
+      document.write("Bilangan yang habis dibagi 5:<br>");
+      for (let angka = n_awal; angka <= n_akhir; angka++) {
+        if (angka % 5 == 0) {
+          document.write(angka + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

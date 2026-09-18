@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 19</title>
+  </head>
+  <body>
+    <h1>Soal Nomor 19</h1>
+
+    <p id="hasil"></p>
+
+    <script>
+      let angka = 3;
+      let hasil = "";
+
+      for (let i = 0; i < 10; i++) {
+        hasil += angka + " ";
+
+        if (i % 2 == 0) {
+          angka = angka * 3;
+        } else {
+          angka = angka - 5;
+        }
+      }
+
+      document.getElementById("hasil").innerHTML = hasil;
+    </script>
+  </body>
+</html>

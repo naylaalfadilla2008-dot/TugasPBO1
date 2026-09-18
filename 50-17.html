@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.17</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        // Perulangan baris 1 sampai 6
+        for (let i = 1; i <= 6; i++) {
+
+            // Angka 0 sebelah kiri
+            for (let j = 1; j <= 6 - i + 1; j++) {
+                hasil += "0";
+            }
+
+            // Bintang
+            hasil += "*";
+
+            // Angka 0 sebelah kanan
+            for (let j = 1; j <= i - 1; j++) {
+                hasil += "0";
+            }
+
+            hasil += "\n";
+        }
+
+        document.getElementById("output").textContent = hasil;
+
+    </script>
+
+</body>
+</html>

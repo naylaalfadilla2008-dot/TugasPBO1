@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 34</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #angka {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="angka">0</div>
+
+    <script>
+        let angka = document.getElementById("angka");
+
+        let posisi = 10;
+
+        setInterval(function() {
+            posisi += 5;
+            angka.style.left = posisi + "px";
+
+    
+            if (posisi >= window.innerWidth - 30) {
+                posisi = 10;
+            }
+        }, 50);
+    </script>
+
+</body>
+</html>

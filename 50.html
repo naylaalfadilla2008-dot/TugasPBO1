@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 50</title>
+</head>
+
+<body>
+
+    <h2>Jumlah Bilangan Prima</h2>
+
+    <input type="number" id="awal" placeholder="n_awal">
+    <input type="number" id="akhir" placeholder="n_akhir">
+    <button onclick="hitung()">Hitung</button>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        function hitung() {
+            let awal = Number(document.getElementById("awal").value);
+            let akhir = Number(document.getElementById("akhir").value);
+            let jumlah = 0;
+
+            for (let i = awal; i <= akhir; i++) {
+
+                if (i < 2) {
+                    continue;
+                }
+
+                let prima = true;
+
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        prima = false;
+                        break;
+                    }
+                }
+
+                if (prima) {
+                    jumlah++;
+                }
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Jumlah bilangan prima = " + jumlah;
+        }
+    </script>
+
+</body>
+</html>

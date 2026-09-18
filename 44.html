@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 44</title>
+</head>
+
+<body>
+
+    <h2>Menghitung Bilangan Genap</h2>
+
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="tambah()">Tambah</button>
+
+    <p>Angka yang dimasukkan: <span id="daftar"></span></p>
+
+    <button onclick="hitung()">Hitung Genap</button>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        let angka = [];
+
+        function tambah() {
+            let nilai = document.getElementById("angka").value;
+
+            if (nilai !== "") {
+                angka.push(Number(nilai));
+                document.getElementById("angka").value = "";
+                document.getElementById("daftar").innerHTML = angka.join(", ");
+            }
+        }
+
+        function hitung() {
+            if (angka.length < 10) {
+                document.getElementById("hasil").innerHTML =
+                    "Masukkan minimal 10 angka!";
+                return;
+            }
+
+            let jumlah = 0;
+
+            for (let i = 0; i < angka.length; i++) {
+                if (angka[i] % 2 === 0) {
+                    jumlah++;
+                }
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Jumlah bilangan genap = " + jumlah;
+        }
+    </script>
+
+</body>
+</html>

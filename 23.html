@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 23</title>
+  </head>
+  <body>
+    <h1>Soal Nomor 23</h1>
+
+    <p id="hasil"></p>
+
+    <script>
+      let maksimum = 100;
+      let angka1 = 0;
+      let angka2 = 1;
+      let hasil = "";
+
+      while (angka1 <= maksimum) {
+        hasil += angka1 + " ";
+
+        let berikutnya = angka1 + angka2;
+        angka1 = angka2;
+        angka2 = berikutnya;
+      }
+
+      document.getElementById("hasil").innerHTML = hasil;
+    </script>
+  </body>
+</html>

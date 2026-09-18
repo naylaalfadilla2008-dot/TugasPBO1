@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.12</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        // Baris pertama angka 0
+        for (let i = 1; i <= 11; i++) {
+            hasil += "0";
+        }
+
+        hasil += "\n";
+
+        // Lima baris bintang dan 0
+        for (let i = 1; i <= 5; i++) {
+
+            for (let j = 1; j <= 10; j++) {
+                hasil += "*";
+            }
+
+            hasil += "0";
+            hasil += "\n";
+        }
+
+        document.getElementById("output").textContent = hasil;
+
+    </script>
+
+</body>
+</html>

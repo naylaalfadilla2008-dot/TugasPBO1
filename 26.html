@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tahun Kabisat</title>
+  </head>
+  <body>
+    <h2>Tahun Kabisat</h2>
+    <script>
+      let n_awal = parseInt(prompt("Masukkan tahun awal:"));
+      let n_akhir = parseInt(prompt("Masukkan tahun akhir:"));
+      document.write("Tahun kabisat yang angka terakhirnya 4:<br>");
+      for (let tahun = n_awal; tahun <= n_akhir; tahun++) {
+        if (tahun % 4 == 0 && tahun % 10 == 4) {
+          document.write(tahun + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

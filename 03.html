@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>NO.3 Menghitung Jumlah Karakter</h2>
+
+    <label>Masukkan kalimat:</label>
+    <input type="text" id="kalimat">
+    <br><br>
+
+    <button onclick="hitungKarakter()">Proses</button>
+
+    <h2 id="hasil"></h2>
+
+    <script>
+        function hitungKarakter() {
+
+            let kalimat = document.getElementById("kalimat").value;
+            let jumlah = kalimat.length;
+
+            document.getElementById("hasil").innerHTML =
+                "Kalimat : " + kalimat + "<br><br>" +
+                "Jumlah karakter : " + jumlah;
+        }
+    </script>
+</body>
+</html>

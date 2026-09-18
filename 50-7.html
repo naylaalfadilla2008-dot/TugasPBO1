@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.7</title>
+</head>
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        // Bagian pertama
+        for (let i = 5; i >= 1; i--) {
+
+            for (let j = 1; j <= 5 - i; j++) {
+                hasil += " ";
+            }
+
+            for (let j = 1; j <= i; j++) {
+                hasil += "*";
+            }
+
+            hasil += "\n";
+        }
+
+        // Bagian kedua
+        for (let i = 2; i <= 5; i++) {
+
+            for (let j = 1; j <= 5 - i; j++) {
+                hasil += " ";
+            }
+
+            for (let j = 1; j <= i; j++) {
+                hasil += "*";
+            }
+
+            hasil += "\n";
+        }
+
+        document.getElementById("output").textContent = hasil;
+
+    </script>
+
+</body>
+</html>

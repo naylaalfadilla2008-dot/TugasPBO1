@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 45</title>
+</head>
+
+<body>
+
+    <h2>Menghitung Bilangan Ganjil</h2>
+
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="tambah()">Tambah</button>
+
+    <p>Angka yang dimasukkan: <span id="daftar"></span></p>
+
+    <button onclick="hitung()">Hitung Ganjil</button>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        let angka = [];
+
+        function tambah() {
+            let nilai = document.getElementById("angka").value;
+
+            if (nilai !== "") {
+                angka.push(Number(nilai));
+                document.getElementById("angka").value = "";
+                document.getElementById("daftar").innerHTML = angka.join(", ");
+            }
+        }
+
+        function hitung() {
+            if (angka.length < 10) {
+                document.getElementById("hasil").innerHTML =
+                    "Masukkan minimal 10 angka!";
+                return;
+            }
+
+            let jumlah = 0;
+
+            for (let i = 0; i < angka.length; i++) {
+                if (angka[i] % 2 !== 0) {
+                    jumlah++;
+                }
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Jumlah bilangan ganjil = " + jumlah;
+        }
+    </script>
+
+</body>
+</html>

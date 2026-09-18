@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 47</title>
+</head>
+
+<body>
+
+    <h2>Total Bilangan Genap</h2>
+
+    <input type="number" id="awal" placeholder="n_awal">
+    <input type="number" id="akhir" placeholder="n_akhir">
+    <button onclick="hitung()">Hitung</button>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        function hitung() {
+            let awal = Number(document.getElementById("awal").value);
+            let akhir = Number(document.getElementById("akhir").value);
+            let total = 0;
+
+            for (let i = awal; i <= akhir; i++) {
+                if (i % 2 === 0) {
+                    total += i;
+                }
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Total bilangan genap = " + total;
+        }
+    </script>
+
+</body>
+</html>

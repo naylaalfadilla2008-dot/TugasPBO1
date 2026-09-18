@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 42</title>
+</head>
+
+<body>
+
+    <h2>Mencari Bilangan Terbesar</h2>
+
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="tambah()">Tambah</button>
+
+    <p>Angka yang dimasukkan: <span id="daftar"></span></p>
+
+    <button onclick="hitung()">Cari Terbesar</button>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        let angka = [];
+
+        function tambah() {
+            let nilai = document.getElementById("angka").value;
+
+            if (nilai !== "") {
+                angka.push(Number(nilai));
+                document.getElementById("angka").value = "";
+                document.getElementById("daftar").innerHTML = angka.join(", ");
+            }
+        }
+
+        function hitung() {
+            if (angka.length < 10) {
+                document.getElementById("hasil").innerHTML =
+                    "Masukkan minimal 10 angka!";
+                return;
+            }
+
+            let terbesar = angka[0];
+
+            for (let i = 1; i < angka.length; i++) {
+                if (angka[i] > terbesar) {
+                    terbesar = angka[i];
+                }
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Bilangan terbesar = " + terbesar;
+        }
+    </script>
+
+</body>
+</html>

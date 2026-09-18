@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 35</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #angka {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="angka">0</div>
+
+    <script>
+        let angka = document.getElementById("angka");
+
+        let posisi = 10;
+        let arah = 1;
+
+        setInterval(function() {
+            posisi += 5 * arah;
+            angka.style.left = posisi + "px";
+
+            if (posisi >= window.innerWidth - 30) {
+                arah = -1;
+            }
+            
+            if (posisi <= 10) {
+                arah = 1;
+            }
+        }, 50);
+    </script>
+
+</body>
+</html>
+

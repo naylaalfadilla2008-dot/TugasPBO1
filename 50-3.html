@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 50.3</title>
+</head>
+<body>
+     <pre id="output"></pre>
+
+    <script>
+
+        let hasil = "";
+
+        // Segitiga pertama
+        for (let i = 1; i <= 3; i++) {
+
+            for (let j = 1; j <= i; j++) {
+                hasil += "*";
+            }
+
+            hasil += "\n";
+        }
+
+        // Segitiga kedua
+        for (let i = 1; i <= 3; i++) {
+
+            for (let j = 1; j <= 3 - i; j++) {
+                hasil += " ";
+            }
+
+            for (let j = 1; j <= i; j++) {
+                hasil += "*";
+            }
+
+            hasil += "\n";
+        }
+
+        document.getElementById("output").textContent = hasil;
+
+    </script>
+</body>
+</html>

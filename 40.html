@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 40</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #angka {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="angka"></div>
+
+    <script>
+        let angka = document.getElementById("angka");
+
+        angka.innerHTML = "0";
+
+        let posisi = 10;
+        let arah = 1;
+
+        setInterval(function() {
+            posisi += 5 * arah;
+            angka.style.top = posisi + "px";
+
+            if (posisi >= window.innerHeight - 50) {
+                posisi = 10;
+            } arah = 1;
+            
+        }, 50);
+    </script>
+
+</body>
+</html>
